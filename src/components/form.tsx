@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button, Input, InputGroup, InputGroupAddon, Label, FormFeedback, FormText } from 'reactstrap';
+import { Button, Input, InputGroup, InputGroupAddon, Label, FormText } from 'reactstrap';
 
 type Props = {
     addItem: (val: string) => {}

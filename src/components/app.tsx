@@ -3,6 +3,7 @@ import { Store } from 'redux';
 
 import { Item } from './item';
 import { Form } from './form';
+import GridData from './table';
 
 type Props = {
   store: Store,
@@ -32,10 +33,12 @@ export class App extends React.Component<Props, State> {
     const items = this.state ? this.state.todos.map((todo, id) => <Item key={id} text={todo} removeItem={() => this.props.removeItem(id)} />) : [];
 
     // vykreslíme komponenty
+    // style={{ width: "800px", margin: "0 auto" }}
     return (
-      <div id="main" style={{ width: "800px", margin: "0 auto" }}>
-        <Form addItem={this.props.addItem} />
-        <ul>{items}</ul>
+      <div id="main">
+        {/* <Form addItem={this.props.addItem} />
+        <ul>{items}</ul> */}
+        <GridData></GridData>
       </div>);
   }
 };

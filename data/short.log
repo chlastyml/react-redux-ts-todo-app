@@ -1,0 +1,54 @@
+Platform: Linux x64
+Electron Version: 7.1.11
+Chromium Version: 78.0.3904.130
+Circuit Meeting Room Version: 1.2.7500
+Web Client Version: 1.2.8001
+Server Address: beta.circuit.com
+Client Timezone: UTC+01:00
+User name: Meeting Room _kacalek
+Tenant ID: ca7577da-6e4d-4eb7-930c-07a72098a090
+User ID: 98314ff0-394c-4429-8769-9801c050930e
+Account: cmp_1535058349@circuit.com
+
+20-02-21 08:27:20.718 DEBUG Initialize App 
+20-02-21 08:27:20.718 DEBUG [primary] [App]: Current resourceUrlWhitelist:  self 
+20-02-21 08:27:20.718 DEBUG [Main]: Initialize App 
+20-02-21 08:27:21.581 INFO [primary] Setting WebRTC APIs for Chrome 
+20-02-21 08:27:21.796 INFO [Electron (HeadsetHidConnector)]: Start headset renderer process 
+20-02-21 08:27:21.831 DEBUG [DashboardEmulator]: Initialize Emulator of Dashboard 
+20-02-21 08:27:21.844 DEBUG [primary] [App]: Current resourceUrlWhitelist:  self 
+20-02-21 08:27:21.848 INFO [WindowsHandler]: handleDisplayAdded - electron event received 
+20-02-21 08:27:21.848 INFO [WindowsHandler]: handleDisplayAdded primary, showing primary window 
+20-02-21 08:27:21.861 DEBUG [Bridge]: Received Message for Main App 
+20-02-21 08:27:21.862 INFO [Configuration]: Save Proxy URL: null 
+20-02-21 08:27:21.875 DEBUG [Bridge]: Received Message for Main App 
+20-02-21 08:27:21.986 DEBUG [primary] [App]: New resourceUrlWhitelist:  self,blob:file%3A**,blob:file:**,blob:https%3A**,blob:https:**,mediastream:https:** 
+20-02-21 08:27:21.987 INFO [primary] Starting Circuit Meeting Room application (Primary Display) 
+20-02-21 08:27:21.994 DEBUG [primary] New Service: UtilSvc 
+20-02-21 08:27:22.011 DEBUG [primary] New Service: PubSubSvc 
+20-02-21 08:27:22.012 DEBUG [primary] New Service: HttpSvc 
+20-02-21 08:27:22.016 DEBUG [primary] New Service: LocalizeSvc 
+20-02-21 08:27:22.038 DEBUG [primary] [HttpSvc]: Retrieving language map for  default 
+20-02-21 08:27:22.052 DEBUG [primary] New Service: PopupSvc 
+20-02-21 08:27:22.052 DEBUG [primary] New Service: LocalStoreSvc 
+20-02-21 08:27:22.052 DEBUG [primary] New Service: LocationSvc 
+20-02-21 08:27:22.052 DEBUG [primary] New Service: UserProfileSvc 
+20-02-21 08:27:22.068 DEBUG [primary] New Service: RegistrationSvc 
+20-02-21 08:27:22.069 DEBUG [primary] [BaseEventTarget]: Added event listener for ConnectionHandler, type = connectionStateChange, count = 1 
+20-02-21 08:27:22.069 DEBUG [primary] [BaseEventTarget]: Added event listener for ConnectionHandler, type = reconnectFailed, count = 1 
+20-02-21 08:27:22.070 DEBUG [primary] New Service: ExtensionSvc 
+20-02-21 08:27:22.070 DEBUG [primary] [BaseEventTarget]: Added event listener for ExtensionConnHandler, type = extensionInitialized, count = 1 
+20-02-21 08:27:22.071 DEBUG [primary] [BaseEventTarget]: Added event listener for ExtensionConnHandler, type = extensionUnregistered, count = 1 
+20-02-21 08:27:22.071 DEBUG [primary] [BaseEventTarget]: Added event listener for ExtensionConnHandler, type = headsetAppLaunched, count = 1 
+20-02-21 08:27:22.080 DEBUG [primary] [BaseEventTarget]: Added event listener for ExtensionConnHandler, type = headsetAppUninstalled, count = 1 
+20-02-21 08:27:22.080 DEBUG [primary] [BaseEventTarget]: Added event listener for ExtensionConnHandler, type = webRTCIPHandlingPolicyChanged, count = 1 
+20-02-21 08:27:22.080 DEBUG [primary] New CMR Service: MeetingRoomMockSvc 
+20-02-21 08:27:22.081 DEBUG [primary] New Service: UserSvc 
+20-02-21 08:27:22.088 DEBUG [primary] New Service: InstrumentationSvc 
+20-02-21 08:27:22.088 DEBUG [primary] New Service: DeviceDiagnosticSvc 
+20-02-21 08:27:22.088 DEBUG [primary] New Service: CircuitCallControlSvc 
+20-02-21 08:27:22.088 DEBUG [primary] New Service: HeadsetHidControlSvc 
+20-02-21 08:27:22.089 DEBUG [primary] New Service: DeviceSettingsSvc 
+20-02-21 08:27:22.091 DEBUG [primary] [WebRTCAdapter]: Get audio output, microphone and camera devices 
+20-02-21 08:27:22.092 DEBUG [primary] [WebRTCAdapter]: Invoke MediaDevices.enumerateDevices() 
+20-02-21 08:27:22.092 DEBUG [primary] New Service: MediaDevicesSvc 
