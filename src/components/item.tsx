@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Button } from 'reactstrap';
 
 type Props = {
   text: string,
@@ -7,7 +8,7 @@ type Props = {
 
 export class Item extends React.Component<Props> {
   render() {
-    return <li>{this.props.text} <button onClick={this.props.removeItem}>✖</button></li>;
+    return <li><Button onClick={this.props.removeItem}>✖</Button> {this.props.text}</li>;
   }
 };
 

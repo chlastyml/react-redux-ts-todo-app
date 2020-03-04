@@ -33,7 +33,7 @@ export class App extends React.Component<Props, State> {
 
     // vykreslíme komponenty
     return (
-      <div>
+      <div id="main" style={{ width: "800px", margin: "0 auto" }}>
         <Form addItem={this.props.addItem} />
         <ul>{items}</ul>
       </div>);

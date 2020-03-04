@@ -4,6 +4,7 @@ import { createStore } from 'redux';
 import { todo } from "./reducers/todo";
 import App from './components/app';
 import { TodoActions } from './enums';
+import 'bootstrap/dist/css/bootstrap.css';
 
 const store = createStore(todo);
 
