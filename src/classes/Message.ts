@@ -42,6 +42,8 @@ function parseModul(line: string) {
 export class Message {
     private _rawMessage: string;
     private _timestamp: string;
+    private _time: string;
+    private _date: string;
     private _level: string;
     private _moduls: string[];
     private _text: string;
@@ -51,6 +53,8 @@ export class Message {
         // TIMESTAMP
         const time = startLine.match(timestampRegex)[0];
         this._timestamp = time;
+        this._date = time.split(' ')[0];
+        this._time = time.split(' ')[1];
 
         // LEVEL
         const level = startLine.match(levelRegex)[0];
@@ -66,6 +70,8 @@ export class Message {
     }
 
     get timestamp() { return this._timestamp; }
+    get time() { return this._time; }
+    get date() { return this._date; }
     get level() { return this._level }
     get moduls() { return this._moduls; }
     get text() { return this._text; }

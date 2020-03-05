@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { createStore } from 'redux';
 import { todo } from "./reducers/todo";
-import App from './components/app';
+import App from './Pages/main';
 import { TodoActions } from './enums';
 import 'bootstrap/dist/css/bootstrap.css';
 

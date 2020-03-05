@@ -52,3 +52,29 @@ Account: cmp_1535058349@circuit.com
 20-02-21 08:27:22.091 DEBUG [primary] [WebRTCAdapter]: Get audio output, microphone and camera devices 
 20-02-21 08:27:22.092 DEBUG [primary] [WebRTCAdapter]: Invoke MediaDevices.enumerateDevices() 
 20-02-21 08:27:22.092 DEBUG [primary] New Service: MediaDevicesSvc 
+20-02-21 08:27:22.336 INFO [primary] [MediaDevicesSvc]: Connected devices (Dashboard API): {} 
+20-02-21 08:27:22.336 DEBUG [primary] [PubSubSvc]: Publishing /media/device/status event 
+20-02-21 08:27:22.337 DEBUG [primary] [NotificationsCtrl]: Received /media/device/status event. Method: STATUS 
+20-02-21 08:27:22.337 ERROR [primary] [NotificationsCtrl]: Very long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long message
+20-02-21 08:27:22.337 DEBUG [primary] [NotificationsCtrl]: Received Data: [
+   "VIDEO_INPUT"
+] 
+20-02-21 08:27:22.341 INFO [primary] [NotificationsCtrl]: Updated regular notifications list [
+   null,
+   null,
+   null,
+   null,
+   null,
+   {
+      "hiddenMode": true,
+      "key": "res_MeetingRoomNotificationNoVideoDevice"
+   },
+   null,
+   null,
+   null
+] 
+20-02-21 08:27:22.341 DEBUG [primary] [NotificationsCtrl]: Update shown notification 
+20-02-21 08:27:22.341 INFO [primary] [NotificationsCtrl]: New highest notification is: {
+   "hiddenMode": true,
+   "key": "res_MeetingRoomNotificationNoVideoDevice"
+} 
