@@ -1,0 +1,39 @@
+// Style in common for both sidebars:
+.sidebar {
+    transition: width var(--secs);
+    width: 0;
+    &.open {
+        width: calc(1% * var(--landscape-width));
+    }
+    .icon {
+        position: fixed;
+        z-index: 10;
+        width: var(--header-height);
+        height: var(--header-height);
+        line-height: var(--header-height);
+        font-size: var(--header-height);
+        text-align: center;
+        user-select: none;
+        cursor: pointer;
+    }
+    .sidebar {
+        transition: transform var(--secs); // <-- Portrait AND landscape!
+        width: calc(1vw * var(--landscape-width));
+        .header {
+            margin: auto;
+        }
+    }
+}
+
+.sidebar {
+    z-index: 5;
+    .sidebar {
+        background: var(--bg-sidebar);
+        &.closed {
+            transform: translateX(-100%);
+        }
+        .header {
+            margin: auto;
+        }
+    }
+}

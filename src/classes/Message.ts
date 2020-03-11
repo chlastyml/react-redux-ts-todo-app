@@ -1,3 +1,5 @@
+import { LogModule } from "./LogModule";
+
 const timestampRegex = new RegExp('([0-9]{2}|[0-9]{4})-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]) (2[0-3]|[01][0-9]):[0-5][0-9]:[0-5][0-9]\.[0-9]{3}');
 const levelRegex = new RegExp('(DEBUG|INFO|WARN|ERROR)');
 const messageStartRegex = new RegExp(`^${timestampRegex.source} ${levelRegex.source}`);
@@ -6,7 +8,7 @@ export function isMessageStart(line: string) {
     return messageStartRegex.test(line);
 }
 
-function parseModuls(line: string): { moduls: string[], text: string } {
+function parseModuls(line: string): { moduls: LogModule[], text: string } {
     const moduls = [];
 
     let text = line.trim();
@@ -17,7 +19,7 @@ function parseModuls(line: string): { moduls: string[], text: string } {
             text = text[0] === ':' ? text.substr(1).trim() : text;
             break;
         }
-        moduls.push(resolve);
+        moduls.push(LogModule.GetModule(resolve));
         text = text.substr(resolve.length + 2).trim();
     }
 
@@ -45,7 +47,7 @@ export class Message {
     private _time: string;
     private _date: string;
     private _level: string;
-    private _moduls: string[];
+    private _modules: LogModule[];
     private _text: string;
 
     constructor(startLine: string) {
@@ -65,7 +67,7 @@ export class Message {
         const text = startLine.substr(lenght);
 
         const result = parseModuls(text);
-        this._moduls = result.moduls;
+        this._modules = result.moduls;
         this._text = result.text;
     }
 
@@ -73,7 +75,7 @@ export class Message {
     get time() { return this._time; }
     get date() { return this._date; }
     get level() { return this._level }
-    get moduls() { return this._moduls; }
+    get modules(): LogModule[] { return this._modules; }
     get text() { return this._text; }
     get shortText() { return this._text.split('\n')[0]; }
 
@@ -83,7 +85,7 @@ export class Message {
     }
 
     public toString() {
-        const moduls = this._moduls.length > 0 ? `[${this._moduls.join('] [')}]:` : '';
+        const moduls = this._modules.length > 0 ? `[${this._modules.join('] [')}]:` : '';
         return `${this._timestamp} ${this._level} ${moduls} ${this._text.split('\n')[0]}`;
     }
 }

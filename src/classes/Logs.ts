@@ -1,4 +1,5 @@
 import { Message, isMessageStart } from "./Message";
+import { LogModule } from "./LogModule";
 
 export class Logs {
     // Platform: string
@@ -14,7 +15,7 @@ export class Logs {
     // Account: string
 
     Messages: Message[];
-    Modules: string[];
+    Modules: LogModule[];
 
     constructor(inputtext: string) {
         this.Messages = [];
@@ -34,11 +35,11 @@ export class Logs {
                 }
             });
 
-            this.Messages.forEach(moduls => moduls.moduls.forEach(modul => {
-                if (!this.Modules.includes(modul)) this.Modules.push(modul);
-            }));
+            this.Modules = LogModule.GetAllModules();
+            // this.Messages.forEach(moduls => moduls.moduls.forEach(modul => {
+            //     const foundModule = this.Modules.filter(m => m.name === modul);
+            //     if (foundModule.length === 0) this.Modules.push(new LogModule(modul));
+            // }));
         }
     }
 }
-
-export default Logs;

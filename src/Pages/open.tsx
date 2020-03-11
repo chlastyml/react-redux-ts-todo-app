@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter, CustomInput } from 'reactstrap';
+import { Modal, ModalHeader, ModalBody, CustomInput } from 'reactstrap';
 
 type Props = {
     onFile: (file: File) => void
@@ -11,7 +11,7 @@ const initState = {
 
 type State = typeof initState;
 
-class ModalExample extends React.Component<Props, State>{
+export class ModalExample extends React.Component<Props, State>{
     state = initState;
 
     toggle() {
@@ -35,5 +35,3 @@ class ModalExample extends React.Component<Props, State>{
         );
     }
 }
-
-export default ModalExample;

@@ -1,22 +1,34 @@
 import * as React from 'react';
-import { Table, CustomInput } from 'reactstrap';
+import { Table } from 'reactstrap';
 import { Logs } from '../classes/Logs';
-import '../css/table.css';
+import '../styles/table.scss';
+import { LogModule } from '../classes/LogModule';
 
 type Props = {
     logs: Logs
 }
 
+function ModuleCube(props: { name: string, color: string }) {
+    return <div className='module' title={props.name} style={{backgroundColor: props.color}} />;
+}
+
 export class GridData extends React.Component<Props> {
+    createModuleCube = (modules: LogModule[]) => {
+        if (modules.length === 0) return <React.Fragment />
+        const allModules = [];
+        for (let i = 0; i < modules.length; i++) {
+            allModules.push(<ModuleCube key={i} name={modules[i].name} color={modules[i].color.HUE}/>);
+        }
+        return allModules;
+    }
     createTableBody = () => {
         const table: any[] = []
         this.props.logs.Messages.forEach((message, key) => {
-            console.log('message.moduls :', message.moduls);
             table.push(<tr key={key}>
                 <th scope="row">{key}</th>
                 <td title={message.date}>{message.time}</td>
                 <td>{message.level}</td>
-                <td>{message.moduls.join(' ')}</td>
+                <td>{this.createModuleCube(message.modules)}</td>
                 <td title={message.text}><div className="cut-text">{message.shortText}</div></td>
             </tr>)
         });
@@ -24,13 +36,13 @@ export class GridData extends React.Component<Props> {
     }
 
     createTable = () => {
-        return (<Table responsive size="sm">
+        return (<Table responsive>
             <thead>
                 <tr>
                     <th>#</th>
                     <th>Time</th>
                     <th>Level</th>
-                    <th>Module</th>
+                    <th>Mods</th>
                     <th>Message</th>
                 </tr>
             </thead>
@@ -49,5 +61,3 @@ export class GridData extends React.Component<Props> {
         );
     }
 };
-
-export default GridData;

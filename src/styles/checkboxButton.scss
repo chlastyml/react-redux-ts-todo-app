@@ -1,0 +1,15 @@
+// @mixin colorize($color) {
+//   background-color: $color;
+
+//   &.clicked {
+//       background-color: $color + 50;
+//   }
+// }
+
+button {
+    &.btn {
+        &.clicked {
+            filter: brightness(10%);
+        }
+    }
+}
